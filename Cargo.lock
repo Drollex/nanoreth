@@ -6744,7 +6744,7 @@ checksum = "95325155c684b1c89f7765e30bc1c42e4a6da51ca513615660cb8a62ef9a88e3"
 [[package]]
 name = "reth"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-rpc-types",
  "aquamarine",
@@ -6790,7 +6790,7 @@ dependencies = [
 [[package]]
 name = "reth-basic-payload-builder"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -6814,7 +6814,7 @@ dependencies = [
 [[package]]
 name = "reth-chain-state"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -6843,7 +6843,7 @@ dependencies = [
 [[package]]
 name = "reth-chain-state"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -6855,14 +6855,14 @@ dependencies = [
  "parking_lot",
  "pin-project",
  "rand 0.9.2",
- "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-metrics 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-metrics 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "revm-database",
  "revm-state",
  "tokio",
@@ -6873,7 +6873,7 @@ dependencies = [
 [[package]]
 name = "reth-chainspec"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-chains",
  "alloy-consensus",
@@ -6893,7 +6893,7 @@ dependencies = [
 [[package]]
 name = "reth-chainspec"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-chains",
  "alloy-consensus",
@@ -6904,16 +6904,16 @@ dependencies = [
  "alloy-trie",
  "auto_impl",
  "derive_more",
- "reth-ethereum-forks 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-network-peers 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-ethereum-forks 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-network-peers 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde_json",
 ]
 
 [[package]]
 name = "reth-cli"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-genesis",
  "clap",
@@ -6927,7 +6927,7 @@ dependencies = [
 [[package]]
 name = "reth-cli-commands"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-chains",
  "alloy-consensus",
@@ -7008,7 +7008,7 @@ dependencies = [
 [[package]]
 name = "reth-cli-runner"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "reth-tasks",
  "tokio",
@@ -7018,7 +7018,7 @@ dependencies = [
 [[package]]
 name = "reth-cli-util"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -7036,7 +7036,7 @@ dependencies = [
 [[package]]
 name = "reth-codecs"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7056,7 +7056,7 @@ dependencies = [
 [[package]]
 name = "reth-codecs"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7067,8 +7067,8 @@ dependencies = [
  "bytes",
  "modular-bitfield",
  "op-alloy-consensus",
- "reth-codecs-derive 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-zstd-compressors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-codecs-derive 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-zstd-compressors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
  "visibility",
 ]
@@ -7076,7 +7076,7 @@ dependencies = [
 [[package]]
 name = "reth-codecs-derive"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "convert_case",
  "proc-macro2",
@@ -7087,7 +7087,7 @@ dependencies = [
 [[package]]
 name = "reth-codecs-derive"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "convert_case",
  "proc-macro2",
@@ -7098,7 +7098,7 @@ dependencies = [
 [[package]]
 name = "reth-config"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "eyre",
  "humantime-serde",
@@ -7113,7 +7113,7 @@ dependencies = [
 [[package]]
 name = "reth-consensus"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -7126,20 +7126,20 @@ dependencies = [
 [[package]]
 name = "reth-consensus"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
  "auto_impl",
- "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "thiserror 2.0.16",
 ]
 
 [[package]]
 name = "reth-consensus-common"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7151,7 +7151,7 @@ dependencies = [
 [[package]]
 name = "reth-consensus-debug-client"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7177,7 +7177,7 @@ dependencies = [
 [[package]]
 name = "reth-db"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "derive_more",
@@ -7201,7 +7201,7 @@ dependencies = [
 [[package]]
 name = "reth-db"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "derive_more",
@@ -7209,14 +7209,14 @@ dependencies = [
  "metrics",
  "page_size",
  "parking_lot",
- "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-fs-util 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-libmdbx 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-metrics 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-nippy-jar 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-static-file-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-tracing 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-fs-util 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-libmdbx 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-metrics 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-nippy-jar 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-static-file-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-tracing 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "rustc-hash 2.1.1",
  "strum 0.27.2",
  "sysinfo",
@@ -7227,7 +7227,7 @@ dependencies = [
 [[package]]
 name = "reth-db-api"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-genesis",
@@ -7255,7 +7255,7 @@ dependencies = [
 [[package]]
 name = "reth-db-api"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-genesis",
@@ -7267,15 +7267,15 @@ dependencies = [
  "modular-bitfield",
  "parity-scale-codec",
  "proptest",
- "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-db-models 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-optimism-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-prune-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-stages-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-db-models 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-optimism-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-prune-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-stages-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "roaring",
  "serde",
 ]
@@ -7283,7 +7283,7 @@ dependencies = [
 [[package]]
 name = "reth-db-common"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-genesis",
@@ -7313,7 +7313,7 @@ dependencies = [
 [[package]]
 name = "reth-db-models"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -7328,22 +7328,22 @@ dependencies = [
 [[package]]
 name = "reth-db-models"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
  "arbitrary",
  "bytes",
  "modular-bitfield",
- "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
 ]
 
 [[package]]
 name = "reth-discv4"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -7369,7 +7369,7 @@ dependencies = [
 [[package]]
 name = "reth-discv5"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -7393,7 +7393,7 @@ dependencies = [
 [[package]]
 name = "reth-dns-discovery"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "data-encoding",
@@ -7417,7 +7417,7 @@ dependencies = [
 [[package]]
 name = "reth-downloaders"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7447,7 +7447,7 @@ dependencies = [
 [[package]]
 name = "reth-ecies"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "aes",
  "alloy-primitives",
@@ -7478,7 +7478,7 @@ dependencies = [
 [[package]]
 name = "reth-engine-local"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -7500,7 +7500,7 @@ dependencies = [
 [[package]]
 name = "reth-engine-primitives"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7525,7 +7525,7 @@ dependencies = [
 [[package]]
 name = "reth-engine-primitives"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7533,15 +7533,15 @@ dependencies = [
  "alloy-rpc-types-engine",
  "auto_impl",
  "futures",
- "reth-chain-state 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-evm 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-payload-builder-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-payload-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-chain-state 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-evm 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-payload-builder-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-payload-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
  "thiserror 2.0.16",
  "tokio",
@@ -7550,7 +7550,7 @@ dependencies = [
 [[package]]
 name = "reth-engine-service"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "futures",
  "pin-project",
@@ -7573,7 +7573,7 @@ dependencies = [
 [[package]]
 name = "reth-engine-tree"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7622,7 +7622,7 @@ dependencies = [
 [[package]]
 name = "reth-engine-util"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-rpc-types-engine",
@@ -7650,7 +7650,7 @@ dependencies = [
 [[package]]
 name = "reth-era"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7666,7 +7666,7 @@ dependencies = [
 [[package]]
 name = "reth-era-downloader"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "bytes",
@@ -7681,7 +7681,7 @@ dependencies = [
 [[package]]
 name = "reth-era-utils"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -7703,7 +7703,7 @@ dependencies = [
 [[package]]
 name = "reth-errors"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "reth-consensus 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
  "reth-execution-errors 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
@@ -7714,18 +7714,18 @@ dependencies = [
 [[package]]
 name = "reth-errors"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
- "reth-consensus 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-consensus 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "thiserror 2.0.16",
 ]
 
 [[package]]
 name = "reth-eth-wire"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-chains",
  "alloy-primitives",
@@ -7754,7 +7754,7 @@ dependencies = [
 [[package]]
 name = "reth-eth-wire-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-chains",
  "alloy-consensus",
@@ -7778,7 +7778,7 @@ dependencies = [
 [[package]]
 name = "reth-ethereum-cli"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "clap",
  "eyre",
@@ -7800,7 +7800,7 @@ dependencies = [
 [[package]]
 name = "reth-ethereum-consensus"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7816,7 +7816,7 @@ dependencies = [
 [[package]]
 name = "reth-ethereum-engine-primitives"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -7834,16 +7834,16 @@ dependencies = [
 [[package]]
 name = "reth-ethereum-engine-primitives"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
  "alloy-rlp",
  "alloy-rpc-types-engine",
- "reth-engine-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-payload-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-engine-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-payload-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
  "sha2 0.10.9",
  "thiserror 2.0.16",
@@ -7852,7 +7852,7 @@ dependencies = [
 [[package]]
 name = "reth-ethereum-forks"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eip2124",
  "alloy-hardforks",
@@ -7866,7 +7866,7 @@ dependencies = [
 [[package]]
 name = "reth-ethereum-forks"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eip2124",
  "alloy-hardforks",
@@ -7879,7 +7879,7 @@ dependencies = [
 [[package]]
 name = "reth-ethereum-payload-builder"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7908,7 +7908,7 @@ dependencies = [
 [[package]]
 name = "reth-ethereum-primitives"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7928,7 +7928,7 @@ dependencies = [
 [[package]]
 name = "reth-ethereum-primitives"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7938,9 +7938,9 @@ dependencies = [
  "alloy-serde",
  "arbitrary",
  "modular-bitfield",
- "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-zstd-compressors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-zstd-compressors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
  "serde_with",
 ]
@@ -7948,7 +7948,7 @@ dependencies = [
 [[package]]
 name = "reth-etl"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "rayon",
  "reth-db-api 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
@@ -7958,7 +7958,7 @@ dependencies = [
 [[package]]
 name = "reth-evm"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7981,7 +7981,7 @@ dependencies = [
 [[package]]
 name = "reth-evm"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -7990,19 +7990,19 @@ dependencies = [
  "auto_impl",
  "derive_more",
  "futures-util",
- "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "revm",
 ]
 
 [[package]]
 name = "reth-evm-ethereum"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8023,7 +8023,7 @@ dependencies = [
 [[package]]
 name = "reth-execution-errors"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-evm",
  "alloy-primitives",
@@ -8036,20 +8036,20 @@ dependencies = [
 [[package]]
 name = "reth-execution-errors"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-evm",
  "alloy-primitives",
  "alloy-rlp",
  "nybbles",
- "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "thiserror 2.0.16",
 ]
 
 [[package]]
 name = "reth-execution-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8067,16 +8067,16 @@ dependencies = [
 [[package]]
 name = "reth-execution-types"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
  "alloy-evm",
  "alloy-primitives",
  "derive_more",
- "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "revm",
  "serde",
  "serde_with",
@@ -8085,7 +8085,7 @@ dependencies = [
 [[package]]
 name = "reth-exex"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8123,7 +8123,7 @@ dependencies = [
 [[package]]
 name = "reth-exex-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -8137,7 +8137,7 @@ dependencies = [
 [[package]]
 name = "reth-fs-util"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "serde",
  "serde_json",
@@ -8147,7 +8147,7 @@ dependencies = [
 [[package]]
 name = "reth-fs-util"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "serde",
  "serde_json",
@@ -8157,7 +8157,7 @@ dependencies = [
 [[package]]
 name = "reth-invalid-block-hooks"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -8184,7 +8184,7 @@ dependencies = [
 [[package]]
 name = "reth-ipc"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "bytes",
  "futures",
@@ -8204,7 +8204,7 @@ dependencies = [
 [[package]]
 name = "reth-libmdbx"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "bitflags 2.9.2",
  "byteorder",
@@ -8220,14 +8220,14 @@ dependencies = [
 [[package]]
 name = "reth-libmdbx"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "bitflags 2.9.2",
  "byteorder",
  "dashmap 6.1.0",
  "derive_more",
  "parking_lot",
- "reth-mdbx-sys 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-mdbx-sys 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "smallvec",
  "thiserror 2.0.16",
  "tracing",
@@ -8236,7 +8236,7 @@ dependencies = [
 [[package]]
 name = "reth-mdbx-sys"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "bindgen 0.71.1",
  "cc",
@@ -8245,7 +8245,7 @@ dependencies = [
 [[package]]
 name = "reth-mdbx-sys"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "bindgen 0.71.1",
  "cc",
@@ -8254,7 +8254,7 @@ dependencies = [
 [[package]]
 name = "reth-metrics"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "futures",
  "metrics",
@@ -8266,7 +8266,7 @@ dependencies = [
 [[package]]
 name = "reth-metrics"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "metrics",
  "metrics-derive",
@@ -8275,7 +8275,7 @@ dependencies = [
 [[package]]
 name = "reth-net-banlist"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
 ]
@@ -8283,7 +8283,7 @@ dependencies = [
 [[package]]
 name = "reth-net-nat"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "futures-util",
  "if-addrs",
@@ -8297,7 +8297,7 @@ dependencies = [
 [[package]]
 name = "reth-network"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8352,7 +8352,7 @@ dependencies = [
 [[package]]
 name = "reth-network-api"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -8377,7 +8377,7 @@ dependencies = [
 [[package]]
 name = "reth-network-p2p"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8399,7 +8399,7 @@ dependencies = [
 [[package]]
 name = "reth-network-peers"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -8414,7 +8414,7 @@ dependencies = [
 [[package]]
 name = "reth-network-peers"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -8427,7 +8427,7 @@ dependencies = [
 [[package]]
 name = "reth-network-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eip2124",
  "humantime-serde",
@@ -8441,7 +8441,7 @@ dependencies = [
 [[package]]
 name = "reth-nippy-jar"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "anyhow",
  "bincode",
@@ -8458,14 +8458,14 @@ dependencies = [
 [[package]]
 name = "reth-nippy-jar"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "anyhow",
  "bincode",
  "derive_more",
  "lz4_flex",
  "memmap2",
- "reth-fs-util 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-fs-util 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
  "thiserror 2.0.16",
  "tracing",
@@ -8475,7 +8475,7 @@ dependencies = [
 [[package]]
 name = "reth-node-api"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-rpc-types-engine",
  "eyre",
@@ -8499,7 +8499,7 @@ dependencies = [
 [[package]]
 name = "reth-node-builder"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8567,7 +8567,7 @@ dependencies = [
 [[package]]
 name = "reth-node-core"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8619,7 +8619,7 @@ dependencies = [
 [[package]]
 name = "reth-node-ethereum"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-network",
@@ -8657,7 +8657,7 @@ dependencies = [
 [[package]]
 name = "reth-node-ethstats"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -8681,7 +8681,7 @@ dependencies = [
 [[package]]
 name = "reth-node-events"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8705,7 +8705,7 @@ dependencies = [
 [[package]]
 name = "reth-node-metrics"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "eyre",
  "http 1.3.1",
@@ -8726,7 +8726,7 @@ dependencies = [
 [[package]]
 name = "reth-node-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "reth-chainspec 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
  "reth-db-api 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
@@ -8738,19 +8738,19 @@ dependencies = [
 [[package]]
 name = "reth-node-types"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
- "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-engine-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-payload-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-engine-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-payload-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
 ]
 
 [[package]]
 name = "reth-optimism-primitives"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8769,7 +8769,7 @@ dependencies = [
 [[package]]
 name = "reth-optimism-primitives"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8778,9 +8778,9 @@ dependencies = [
  "arbitrary",
  "bytes",
  "op-alloy-consensus",
- "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-zstd-compressors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-zstd-compressors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
  "serde_with",
 ]
@@ -8788,7 +8788,7 @@ dependencies = [
 [[package]]
 name = "reth-payload-builder"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -8809,7 +8809,7 @@ dependencies = [
 [[package]]
 name = "reth-payload-builder-primitives"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "pin-project",
  "reth-payload-primitives 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
@@ -8821,10 +8821,10 @@ dependencies = [
 [[package]]
 name = "reth-payload-builder-primitives"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "pin-project",
- "reth-payload-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-payload-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "tokio",
  "tokio-stream",
  "tracing",
@@ -8833,7 +8833,7 @@ dependencies = [
 [[package]]
 name = "reth-payload-primitives"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -8853,7 +8853,7 @@ dependencies = [
 [[package]]
 name = "reth-payload-primitives"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -8861,10 +8861,10 @@ dependencies = [
  "auto_impl",
  "either",
  "op-alloy-rpc-types-engine",
- "reth-chain-state 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-chain-state 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
  "thiserror 2.0.16",
  "tokio",
@@ -8873,7 +8873,7 @@ dependencies = [
 [[package]]
 name = "reth-payload-validator"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-rpc-types-engine",
@@ -8883,7 +8883,7 @@ dependencies = [
 [[package]]
 name = "reth-primitives"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "c-kzg",
@@ -8897,7 +8897,7 @@ dependencies = [
 [[package]]
 name = "reth-primitives-traits"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8930,7 +8930,7 @@ dependencies = [
 [[package]]
 name = "reth-primitives-traits"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -8949,7 +8949,7 @@ dependencies = [
  "op-alloy-consensus",
  "proptest",
  "proptest-arbitrary-interop",
- "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "revm-bytecode",
  "revm-primitives",
  "revm-state",
@@ -8962,7 +8962,7 @@ dependencies = [
 [[package]]
 name = "reth-provider"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -9004,7 +9004,7 @@ dependencies = [
 [[package]]
 name = "reth-provider"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -9017,28 +9017,28 @@ dependencies = [
  "notify",
  "parking_lot",
  "rayon",
- "reth-chain-state 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-db 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-ethereum-engine-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-evm 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-fs-util 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-metrics 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-nippy-jar 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-node-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-prune-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-stages-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-static-file-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-db 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-chain-state 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-db 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-ethereum-engine-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-evm 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-fs-util 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-metrics 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-nippy-jar 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-node-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-prune-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-stages-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-static-file-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-db 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "revm-database",
  "revm-state",
  "strum 0.27.2",
@@ -9049,7 +9049,7 @@ dependencies = [
 [[package]]
 name = "reth-prune"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -9077,7 +9077,7 @@ dependencies = [
 [[package]]
 name = "reth-prune-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "arbitrary",
@@ -9091,13 +9091,13 @@ dependencies = [
 [[package]]
 name = "reth-prune-types"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "arbitrary",
  "derive_more",
  "modular-bitfield",
- "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
  "thiserror 2.0.16",
 ]
@@ -9105,7 +9105,7 @@ dependencies = [
 [[package]]
 name = "reth-ress-protocol"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -9124,7 +9124,7 @@ dependencies = [
 [[package]]
 name = "reth-ress-provider"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -9151,7 +9151,7 @@ dependencies = [
 [[package]]
 name = "reth-revm"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "reth-primitives-traits 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
@@ -9164,7 +9164,7 @@ dependencies = [
 [[package]]
 name = "reth-rpc"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-dyn-abi",
@@ -9243,7 +9243,7 @@ dependencies = [
 [[package]]
 name = "reth-rpc-api"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-genesis",
@@ -9271,7 +9271,7 @@ dependencies = [
 [[package]]
 name = "reth-rpc-builder"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-network",
  "alloy-provider",
@@ -9310,7 +9310,7 @@ dependencies = [
 [[package]]
 name = "reth-rpc-convert"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-json-rpc",
@@ -9331,7 +9331,7 @@ dependencies = [
 [[package]]
 name = "reth-rpc-engine-api"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -9361,7 +9361,7 @@ dependencies = [
 [[package]]
 name = "reth-rpc-eth-api"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-dyn-abi",
@@ -9405,7 +9405,7 @@ dependencies = [
 [[package]]
 name = "reth-rpc-eth-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -9452,7 +9452,7 @@ dependencies = [
 [[package]]
 name = "reth-rpc-layer"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-rpc-types-engine",
  "http 1.3.1",
@@ -9466,7 +9466,7 @@ dependencies = [
 [[package]]
 name = "reth-rpc-server-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -9482,7 +9482,7 @@ dependencies = [
 [[package]]
 name = "reth-stages"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -9526,7 +9526,7 @@ dependencies = [
 [[package]]
 name = "reth-stages-api"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -9553,7 +9553,7 @@ dependencies = [
 [[package]]
 name = "reth-stages-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "arbitrary",
@@ -9567,21 +9567,21 @@ dependencies = [
 [[package]]
 name = "reth-stages-types"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "arbitrary",
  "bytes",
  "modular-bitfield",
- "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "serde",
 ]
 
 [[package]]
 name = "reth-static-file"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "parking_lot",
@@ -9601,7 +9601,7 @@ dependencies = [
 [[package]]
 name = "reth-static-file-types"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "clap",
@@ -9613,7 +9613,7 @@ dependencies = [
 [[package]]
 name = "reth-static-file-types"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "derive_more",
@@ -9624,7 +9624,7 @@ dependencies = [
 [[package]]
 name = "reth-storage-api"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -9647,30 +9647,30 @@ dependencies = [
 [[package]]
 name = "reth-storage-api"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
  "alloy-primitives",
  "alloy-rpc-types-engine",
  "auto_impl",
- "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-db-models 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-prune-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-stages-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-chainspec 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-db-models 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-ethereum-primitives 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-execution-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-prune-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-stages-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "revm-database",
 ]
 
 [[package]]
 name = "reth-storage-errors"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -9686,15 +9686,15 @@ dependencies = [
 [[package]]
 name = "reth-storage-errors"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
  "alloy-rlp",
  "derive_more",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-prune-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-static-file-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-prune-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-static-file-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "revm-database-interface",
  "thiserror 2.0.16",
 ]
@@ -9702,7 +9702,7 @@ dependencies = [
 [[package]]
 name = "reth-tasks"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "auto_impl",
  "dyn-clone",
@@ -9720,7 +9720,7 @@ dependencies = [
 [[package]]
 name = "reth-tokio-util"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "tokio",
  "tokio-stream",
@@ -9730,7 +9730,7 @@ dependencies = [
 [[package]]
 name = "reth-tracing"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "clap",
  "eyre",
@@ -9745,7 +9745,7 @@ dependencies = [
 [[package]]
 name = "reth-tracing"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "clap",
  "eyre",
@@ -9760,7 +9760,7 @@ dependencies = [
 [[package]]
 name = "reth-transaction-pool"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -9800,7 +9800,7 @@ dependencies = [
 [[package]]
 name = "reth-trie"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -9824,7 +9824,7 @@ dependencies = [
 [[package]]
 name = "reth-trie"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -9834,13 +9834,13 @@ dependencies = [
  "auto_impl",
  "itertools 0.14.0",
  "metrics",
- "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-metrics 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-stages-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-sparse 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-metrics 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-stages-types 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-storage-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-sparse 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "revm-database",
  "tracing",
  "triehash",
@@ -9849,7 +9849,7 @@ dependencies = [
 [[package]]
 name = "reth-trie-common"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -9875,7 +9875,7 @@ dependencies = [
 [[package]]
 name = "reth-trie-common"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-consensus",
  "alloy-primitives",
@@ -9891,8 +9891,8 @@ dependencies = [
  "nybbles",
  "plain_hasher",
  "rayon",
- "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-codecs 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "revm-database",
  "serde",
  "serde_with",
@@ -9901,7 +9901,7 @@ dependencies = [
 [[package]]
 name = "reth-trie-db"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "reth-db-api 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
@@ -9914,20 +9914,20 @@ dependencies = [
 [[package]]
 name = "reth-trie-db"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
- "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-db-api 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "tracing",
 ]
 
 [[package]]
 name = "reth-trie-parallel"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -9952,7 +9952,7 @@ dependencies = [
 [[package]]
 name = "reth-trie-sparse"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -9971,16 +9971,16 @@ dependencies = [
 [[package]]
 name = "reth-trie-sparse"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
  "alloy-trie",
  "auto_impl",
  "rayon",
- "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
- "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-execution-errors 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-primitives-traits 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
+ "reth-trie-common 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "smallvec",
  "tracing",
 ]
@@ -9988,7 +9988,7 @@ dependencies = [
 [[package]]
 name = "reth-trie-sparse-parallel"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "alloy-primitives",
  "alloy-rlp",
@@ -10006,7 +10006,7 @@ dependencies = [
 [[package]]
 name = "reth-zstd-compressors"
 version = "1.8.2"
-source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "zstd",
 ]
@@ -10014,7 +10014,7 @@ dependencies = [
 [[package]]
 name = "reth-zstd-compressors"
 version = "1.8.2"
-source = "git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a#416c2e26756f1c8ee86e6b8e4081f434952b3a1a"
+source = "git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f#56e954cb5a88626d9b736a31e4b8c267613cec7f"
 dependencies = [
  "zstd",
 ]
@@ -10092,7 +10092,7 @@ dependencies = [
  "reth-payload-primitives 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
  "reth-primitives",
  "reth-primitives-traits 1.8.2 (git+https://github.com/Drollex/reth.git?branch=hl-gas-accounting)",
- "reth-provider 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=416c2e26756f1c8ee86e6b8e4081f434952b3a1a)",
+ "reth-provider 1.8.2 (git+https://github.com/hl-archive-node/reth?rev=56e954cb5a88626d9b736a31e4b8c267613cec7f)",
  "reth-revm",
  "reth-rpc",
  "reth-rpc-builder",
