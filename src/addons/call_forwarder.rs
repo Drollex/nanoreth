@@ -15,6 +15,8 @@ use jsonrpsee_core::{ClientError, RpcResult, async_trait, client::ClientT};
 use reth_rpc::eth::EthApiTypes;
 use reth_rpc_eth_api::{RpcTxReq, helpers::EthCall};
 
+use reth_rpc_eth_api::helpers::HlPrecompileOverrides;
+
 #[rpc(server, namespace = "eth")]
 pub(crate) trait CallForwarderApi<TxReq: RpcObject> {
     /// Executes a new message call immediately without creating a transaction on the block chain.
@@ -25,6 +27,7 @@ pub(crate) trait CallForwarderApi<TxReq: RpcObject> {
         block_id: Option<BlockId>,
         state_overrides: Option<StateOverride>,
         block_overrides: Option<Box<BlockOverrides>>,
+        precompile_overrides: Option<Vec<HlPrecompileOverrides>>,
     ) -> RpcResult<Bytes>;
 
     /// Generates and returns an estimate of how much gas is necessary to allow the transaction to
@@ -64,34 +67,49 @@ where
         block_id: Option<BlockId>,
         state_overrides: Option<StateOverride>,
         block_overrides: Option<Box<BlockOverrides>>,
+        precompile_overrides: Option<Vec<HlPrecompileOverrides>>,
     ) -> RpcResult<Bytes> {
         let is_latest = block_id.as_ref().map(|b| b.is_latest()).unwrap_or(true);
-        let result = if is_latest {
-            self.upstream_client
-                .request(
-                    "eth_call",
-                    rpc_params![request, block_id, state_overrides, block_overrides],
+
+        if Some(precompile_overrides) {
+            EthCall::call(
+                    &self.eth_api,
+                    request,
+                    block_id,
+                    EvmOverrides::new(state_overrides, block_overrides, precompile_overrides),
                 )
                 .await
-                .map_err(|e| match e {
-                    ClientError::Call(e) => e,
-                    _ => ErrorObject::owned(
-                        INTERNAL_ERROR_CODE,
-                        format!("Failed to call: {e:?}"),
-                        Some(()),
-                    ),
+                .map_err(|e| {
+                    ErrorObject::owned(INTERNAL_ERROR_CODE, format!("Failed to call: {e:?}"), Some(()))
                 })?
         } else {
-            EthCall::call(
-                &self.eth_api,
-                request,
-                block_id,
-                EvmOverrides::new(state_overrides, block_overrides),
-            )
-            .await
-            .map_err(|e| {
-                ErrorObject::owned(INTERNAL_ERROR_CODE, format!("Failed to call: {e:?}"), Some(()))
-            })?
+              let result = if is_latest {
+                self.upstream_client
+                    .request(
+                        "eth_call",
+                        rpc_params![request, block_id, state_overrides, block_overrides],
+                    )
+                    .await
+                    .map_err(|e| match e {
+                        ClientError::Call(e) => e,
+                        _ => ErrorObject::owned(
+                            INTERNAL_ERROR_CODE,
+                            format!("Failed to call: {e:?}"),
+                            Some(()),
+                        ),
+                    })?
+            } else {
+                EthCall::call(
+                    &self.eth_api,
+                    request,
+                    block_id,
+                    EvmOverrides::new(state_overrides, block_overrides, None),
+                )
+                .await
+                .map_err(|e| {
+                    ErrorObject::owned(INTERNAL_ERROR_CODE, format!("Failed to call: {e:?}"), Some(()))
+                })?
+            };  
         };
 
         Ok(result)
