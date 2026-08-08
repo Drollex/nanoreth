@@ -68,21 +68,22 @@ where
         state_overrides: Option<StateOverride>,
         block_overrides: Option<Box<BlockOverrides>>,
         precompile_overrides: Option<Vec<HlPrecompileOverrides>>,
-    ) -> RpcResult<Bytes> {
-        let is_latest = block_id.as_ref().map(|b| b.is_latest()).unwrap_or(true);
-
-        if Some(precompile_overrides) {
-            EthCall::call(
+    ) -> RpcResult<Bytes> {   
+        if precompile_overrides.is_some() {
+            let result = EthCall::call(
                     &self.eth_api,
                     request,
                     block_id,
-                    EvmOverrides::new(state_overrides, block_overrides, precompile_overrides),
+                    EvmOverrides::new(state_overrides, block_overrides),
+                    precompile_overrides,
                 )
                 .await
                 .map_err(|e| {
                     ErrorObject::owned(INTERNAL_ERROR_CODE, format!("Failed to call: {e:?}"), Some(()))
-                })?
+                })?;
+                Ok(result)
         } else {
+              let is_latest = block_id.as_ref().map(|b| b.is_latest()).unwrap_or(true);  
               let result = if is_latest {
                 self.upstream_client
                     .request(
@@ -103,16 +104,16 @@ where
                     &self.eth_api,
                     request,
                     block_id,
-                    EvmOverrides::new(state_overrides, block_overrides, None),
+                    EvmOverrides::new(state_overrides, block_overrides),
+                    None,
                 )
                 .await
                 .map_err(|e| {
                     ErrorObject::owned(INTERNAL_ERROR_CODE, format!("Failed to call: {e:?}"), Some(()))
                 })?
             };  
-        };
-
-        Ok(result)
+            Ok(result)
+        }
     }
 
     async fn estimate_gas(
