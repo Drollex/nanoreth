@@ -1,4 +1,4 @@
-use std::sync::Arc;
+use std::{num::NonZeroU32, sync::Arc};
 
 use clap::Parser;
 use reth::{
@@ -18,13 +18,14 @@ use reth_hl::{
     node::{
         HlNode,
         cli::{Cli, HlNodeArgs},
+        evm::read_precompile_forwarder::{ReadPrecompileForwarder, set_read_precompile_forwarder},
         rpc::precompile::{HlBlockPrecompileApiServer, HlBlockPrecompileExt},
         spot_meta::{self, init as spot_meta_init},
         storage::tables::Tables,
         types::set_spot_metadata_db,
     },
 };
-use tracing::info;
+use tracing::{info, warn};
 
 // We use jemalloc for performance reasons
 #[cfg(all(feature = "jemalloc", unix))]
@@ -57,6 +58,19 @@ fn main() -> eyre::Result<()> {
             }
             spot_meta::add_spot_meta_overrides(spot_meta_overrides);
 
+            reth_hl::node::evm::mrb::set_activation_block(ext.mrb_activation_block)?;
+            let chain_id = reth_chainspec::EthChainSpec::chain(builder.config().chain.as_ref()).id();
+            let announced = reth_hl::node::evm::mrb::scheduled_activation_block(chain_id);
+            if let Some(height) = ext.mrb_activation_block
+                && Some(height) != announced
+            {
+                warn!(
+                    height,
+                    ?announced,
+                    "MRB activation block overridden; this node diverges from the announced schedule"
+                );
+            }
+
             let default_upstream_rpc_url = builder.config().chain.official_rpc_url();
 
             let enable_sync_server = ext.enable_sync_server;
@@ -67,6 +81,10 @@ fn main() -> eyre::Result<()> {
             let captured: Arc<std::sync::Mutex<CapturedMethods>> =
                 Arc::new(std::sync::Mutex::new(CapturedMethods { http: None, ws: None, ipc: None }));
             let captured_for_restart = captured.clone();
+
+            // Captured here so the read precompile forwarder can drive requests from the
+            // blocking RPC workers that precompiles run on.
+            let runtime_handle = tokio::runtime::Handle::current();
 
             let (node, engine_handle_tx) = HlNode::new(
                 ext.block_source_args.parse().await?,
@@ -93,6 +111,44 @@ fn main() -> eyre::Result<()> {
                             .into_rpc(),
                         )?;
                         info!("Call/gas estimation will be forwarded to {}", upstream_rpc_url);
+                    }
+
+                    if ext.forward_read_precompiles {
+                        let read_precompile_rpc_url = ext
+                            .read_precompile_rpc_url
+                            .clone()
+                            .unwrap_or_else(|| upstream_rpc_url.clone());
+                        let read_precompile_rpc_rate_limit = ext
+                            .read_precompile_rpc_rate_limit
+                            .or_else(|| {
+                                (read_precompile_rpc_url == default_upstream_rpc_url)
+                                    .then(|| NonZeroU32::new(5).unwrap())
+                            });
+                        set_read_precompile_forwarder(ReadPrecompileForwarder::new(
+                            &read_precompile_rpc_url,
+                            runtime_handle.clone(),
+                            read_precompile_rpc_rate_limit,
+                        )?);
+                        info!(
+                            "Read precompile calls at the chain head will be resolved through {}",
+                            read_precompile_rpc_url
+                        );
+                        if let Some(rate_limit) = read_precompile_rpc_rate_limit {
+                            info!(
+                                "Forwarded read precompile calls are limited to {} requests/s",
+                                rate_limit
+                            );
+                        }
+                        // Resolving against the official RPC works, but it is rate limited and
+                        // every unrecorded input costs a request, so it is easy to get throttled
+                        // without noticing why calls started failing.
+                        if read_precompile_rpc_url == default_upstream_rpc_url {
+                            warn!(
+                                "{} is rate limited; set --read-precompile-rpc-url to your own \
+                                 hl-node to avoid being throttled",
+                                read_precompile_rpc_url
+                            );
+                        }
                     }
 
                     // This is a temporary workaround to fix the issue with custom headers

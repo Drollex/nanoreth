@@ -1,6 +1,6 @@
 use super::block_store::BlockStore;
 use crate::{
-    chainspec::HlChainSpec,
+    chainspec::{HlChainSpec, TESTNET_CHAIN_ID},
     node::{
         network::{HlNetworkPrimitives, HlNewBlock},
         types::BlockAndReceipts,
@@ -18,6 +18,7 @@ use reth_network::{
     message::NewBlockMessage,
 };
 use reth_network_peers::PeerId;
+use std::time::{Duration, Instant};
 use std::{
     pin::Pin,
     sync::Arc,
@@ -25,6 +26,12 @@ use std::{
 };
 use tokio::{sync::mpsc, task::JoinHandle};
 use tracing::{debug, info, warn};
+
+const BODY_REQUEST_TIMEOUT: Duration = Duration::from_secs(30);
+
+const fn source_reorgs_enabled(chain_id: u64) -> bool {
+    chain_id == TESTNET_CHAIN_ID
+}
 
 /// A block poller that polls blocks from `BlockStore` and sends them to the `block_tx`
 #[derive(Debug)]
@@ -44,7 +51,13 @@ impl BlockPoller {
         let (start_tx, start_rx) = mpsc::channel(1);
         let (block_tx, block_rx) = mpsc::channel(100);
         let store = block_store.clone();
-        let task = tokio::spawn(Self::task(start_rx, store, block_tx, debug_cutoff_height));
+        let task = tokio::spawn(Self::task(
+            start_rx,
+            store,
+            block_tx,
+            debug_cutoff_height,
+            source_reorgs_enabled(chain_id),
+        ));
         (Self { chain_id, block_rx, task, block_store }, start_tx)
     }
 
@@ -58,25 +71,62 @@ impl BlockPoller {
         block_store: Arc<BlockStore>,
         block_tx: mpsc::Sender<(u64, BlockAndReceipts)>,
         debug_cutoff_height: Option<u64>,
+        source_reorgs_enabled: bool,
     ) -> eyre::Result<()> {
         start_rx.recv().await.ok_or(eyre::eyre!("Failed to receive start signal"))?;
         info!("Starting block poller");
 
         let polling_interval = block_store.polling_interval();
+        let mut next_reorg_check = Instant::now();
         let mut next_block_number = block_store
             .find_latest_block_number()
             .await
             .ok_or(eyre::eyre!("Failed to find latest block number"))?;
 
         loop {
-            if let Some(debug_cutoff_height) = debug_cutoff_height &&
-                next_block_number > debug_cutoff_height
+            if let Some(debug_cutoff_height) = debug_cutoff_height
+                && next_block_number > debug_cutoff_height
             {
                 next_block_number = debug_cutoff_height;
             }
 
+            if source_reorgs_enabled && next_block_number > 0 && Instant::now() >= next_reorg_check
+            {
+                next_reorg_check = Instant::now() + Duration::from_secs(1);
+                let previous = next_block_number - 1;
+                if let Ok((refreshed, changed)) = block_store.refresh_by_number(previous).await {
+                    let expected_parent = if previous > 0 {
+                        block_store.get_by_number(previous - 1).await.ok().map(|block| block.hash())
+                    } else {
+                        None
+                    };
+                    if changed
+                        || expected_parent.is_some_and(|hash| hash != refreshed.parent_hash())
+                    {
+                        block_store.invalidate_above(previous.saturating_sub(1));
+                        next_block_number = previous;
+                        tokio::time::sleep(polling_interval).await;
+                        continue;
+                    }
+                }
+            }
+
             match block_store.get_by_number(next_block_number).await {
                 Ok(block) => {
+                    if source_reorgs_enabled
+                        && next_block_number > 0
+                        && block_store
+                            .get_by_number(next_block_number - 1)
+                            .await
+                            .is_ok_and(|parent| parent.hash() != block.parent_hash())
+                    {
+                        block_store.invalidate_above(next_block_number.saturating_sub(2));
+                        next_block_number -= 1;
+                        // Back off: a source that keeps serving a mismatched parent would
+                        // otherwise be refetched in a tight loop.
+                        tokio::time::sleep(polling_interval).await;
+                        continue;
+                    }
                     block_tx.send((next_block_number, block)).await?;
                     next_block_number += 1;
                 }
@@ -89,21 +139,31 @@ impl BlockPoller {
 impl BlockImport<HlNewBlock> for BlockPoller {
     fn poll(&mut self, _cx: &mut Context<'_>) -> Poll<BlockImportEvent<HlNewBlock>> {
         debug!("(receiver) Polling");
-        match Pin::new(&mut self.block_rx).poll_recv(_cx) {
-            Poll::Ready(Some((number, block))) => {
-                debug!("Polled block: {}", number);
-                self.block_store.index_block(&block);
-                let reth_block = block.to_reth_block(self.chain_id);
-                let hash = reth_block.header.hash_slow();
-                let td = U128::from(reth_block.header.difficulty);
-                Poll::Ready(BlockImportEvent::Announcement(BlockValidation::ValidHeader {
-                    block: NewBlockMessage {
-                        block: HlNewBlock(NewBlock { block: reth_block, td }).into(),
-                        hash,
-                    },
-                }))
+        loop {
+            match Pin::new(&mut self.block_rx).poll_recv(_cx) {
+                Poll::Ready(Some((number, block))) => {
+                    if source_reorgs_enabled(self.chain_id)
+                        && !self.block_store.is_cached_canonical_hash(block.hash())
+                    {
+                        debug!(number, hash = %block.hash(), "Dropping stale queued block");
+                        continue;
+                    }
+                    debug!("Polled block: {}", number);
+                    self.block_store.index_block(&block);
+                    let reth_block = block.to_reth_block(self.chain_id);
+                    let hash = reth_block.header.hash_slow();
+                    let td = U128::from(reth_block.header.difficulty);
+                    return Poll::Ready(BlockImportEvent::Announcement(
+                        BlockValidation::ValidHeader {
+                            block: NewBlockMessage {
+                                block: HlNewBlock(NewBlock { block: reth_block, td }).into(),
+                                hash,
+                            },
+                        },
+                    ));
+                }
+                Poll::Ready(None) | Poll::Pending => return Poll::Pending,
             }
-            Poll::Ready(None) | Poll::Pending => Poll::Pending,
         }
     }
 
@@ -143,6 +203,10 @@ impl PseudoPeer {
                 debug!(
                     "GetBlockHeaders request: {start_block:?}, {limit:?}, {skip:?}, {direction:?}"
                 );
+                let requested_hash = match start_block {
+                    HashOrNumber::Hash(hash) => Some(hash),
+                    HashOrNumber::Number(_) => None,
+                };
                 let number = match start_block {
                     HashOrNumber::Hash(hash) => match self.block_store.hash_to_number(hash) {
                         Ok(n) => n,
@@ -155,15 +219,31 @@ impl PseudoPeer {
                     HashOrNumber::Number(number) => number,
                 };
 
-                let blocks = match direction {
-                    HeadersDirection::Rising => self.collect_blocks(number..number + limit).await,
-                    HeadersDirection::Falling => {
-                        self.collect_blocks((number + 1 - limit..number + 1).rev()).await
-                    }
-                }?;
+                // Serve the whole requested range. The only peer is this node's own downloader, which
+                // treats a shorter response as invalid and re-requests the same range forever, so
+                // the size caps reth applies to untrusted peers must not be copied here.
+                let step = skip as u64 + 1;
+                let mut next_number = Some(number);
+                let mut block_numbers = Vec::new();
+                for _ in 0..limit {
+                    let Some(block_number) = next_number else { break };
+                    block_numbers.push(block_number);
+                    next_number = match direction {
+                        HeadersDirection::Rising => block_number.checked_add(step),
+                        HeadersDirection::Falling => block_number.checked_sub(step),
+                    };
+                }
+                let blocks = self.collect_blocks(block_numbers).await?;
+
+                if requested_hash
+                    .is_some_and(|hash| blocks.first().is_none_or(|block| block.hash() != hash))
+                {
+                    let _ = response.send(Ok(BlockHeaders(vec![])));
+                    return Ok(());
+                }
 
                 // collect_blocks auto-indexes hashes via BlockStore
-                let block_headers: Vec<_> = blocks
+                let encoded_headers: Vec<_> = blocks
                     .into_par_iter()
                     .map(|block| {
                         let reth_block = block.to_reth_block(chain_id);
@@ -171,23 +251,35 @@ impl PseudoPeer {
                     })
                     .collect();
 
-                let _ = response.send(Ok(BlockHeaders(block_headers)));
+                let _ = response.send(Ok(BlockHeaders(encoded_headers)));
             }
             IncomingEthRequest::GetBlockBodies { peer_id: _, request, response } => {
                 let GetBlockBodies(hashes) = request;
                 debug!("GetBlockBodies request: {}", hashes.len());
 
-                let mut numbers = Vec::new();
-                for hash in hashes {
-                    match self.block_store.hash_to_number(hash) {
-                        Ok(n) => numbers.push(n),
-                        Err(e) => warn!("Failed to resolve block hash {hash:?}: {e}"),
+                let requested_hashes = hashes.clone();
+                let recoveries = self.block_store.get_by_hashes(hashes);
+                let results = match tokio::time::timeout(BODY_REQUEST_TIMEOUT, recoveries).await {
+                    Ok(results) => results,
+                    Err(_) => {
+                        warn!("Timed out processing GetBlockBodies request");
+                        Vec::new()
+                    }
+                };
+                // reth pairs bodies with the requested headers by position, so answer with the
+                // resolved prefix only; a gap would shift every later body onto the wrong header.
+                let mut blocks = Vec::new();
+                for (hash, result) in requested_hashes.into_iter().zip(results) {
+                    match result {
+                        Ok(block) => blocks.push(block),
+                        Err(e) => {
+                            warn!("Failed to resolve block hash {hash:?}: {e}");
+                            break;
+                        }
                     }
                 }
 
-                let block_bodies = self
-                    .collect_blocks(numbers)
-                    .await?
+                let block_bodies = blocks
                     .into_iter()
                     .map(|block| block.to_reth_block(chain_id).body)
                     .collect::<Vec<_>>();
@@ -198,5 +290,211 @@ impl PseudoPeer {
             eth_req => debug!("New eth protocol request: {eth_req:?}"),
         }
         Ok(())
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::{
+        chainspec::MAINNET_CHAIN_ID,
+        pseudo_peer::sources::{BlockSource, test_utils},
+    };
+    use futures::FutureExt;
+    use std::sync::atomic::{AtomicUsize, Ordering};
+    use tokio::sync::Notify;
+
+    #[derive(Debug)]
+    struct CountingSource {
+        refreshes: Arc<AtomicUsize>,
+        collected: Arc<Notify>,
+        refreshed: Arc<Notify>,
+    }
+
+    impl BlockSource for CountingSource {
+        fn collect_block(
+            &self,
+            height: u64,
+        ) -> futures::future::BoxFuture<'static, eyre::Result<BlockAndReceipts>> {
+            self.collected.notify_one();
+            async move { Ok(test_utils::block(height, height as u8)) }.boxed()
+        }
+
+        fn refresh_block(
+            &self,
+            height: u64,
+        ) -> futures::future::BoxFuture<'static, eyre::Result<BlockAndReceipts>> {
+            self.refreshes.fetch_add(1, Ordering::SeqCst);
+            self.refreshed.notify_one();
+            async move { Ok(test_utils::block(height, height as u8)) }.boxed()
+        }
+
+        fn find_latest_block_number(&self) -> futures::future::BoxFuture<'static, Option<u64>> {
+            async { Some(2) }.boxed()
+        }
+
+        fn recommended_chunk_size(&self) -> u64 {
+            1
+        }
+    }
+
+    fn counting_store() -> (Arc<BlockStore>, Arc<AtomicUsize>, Arc<Notify>, Arc<Notify>) {
+        let refreshes = Arc::new(AtomicUsize::new(0));
+        let collected = Arc::new(Notify::new());
+        let refreshed = Arc::new(Notify::new());
+        let source = CountingSource {
+            refreshes: refreshes.clone(),
+            collected: collected.clone(),
+            refreshed: refreshed.clone(),
+        };
+        let store = Arc::new(BlockStore::new(Arc::new(Box::new(source)), None, MAINNET_CHAIN_ID));
+        (store, refreshes, collected, refreshed)
+    }
+
+    #[test]
+    fn source_reorg_handling_is_testnet_only() {
+        assert!(source_reorgs_enabled(TESTNET_CHAIN_ID));
+        assert!(!source_reorgs_enabled(MAINNET_CHAIN_ID));
+        assert!(!source_reorgs_enabled(1));
+    }
+
+    #[tokio::test]
+    async fn mainnet_poller_never_refreshes_source_blocks() {
+        let (store, refreshes, collected, _) = counting_store();
+        let (poller, start) = BlockPoller::new_suspended(MAINNET_CHAIN_ID, store, None);
+
+        start.send(()).await.unwrap();
+        collected.notified().await;
+
+        assert_eq!(refreshes.load(Ordering::SeqCst), 0);
+        poller.task.abort();
+    }
+
+    #[tokio::test]
+    async fn testnet_poller_refreshes_source_blocks() {
+        let (store, refreshes, _, refreshed) = counting_store();
+        let (poller, start) = BlockPoller::new_suspended(TESTNET_CHAIN_ID, store, None);
+
+        start.send(()).await.unwrap();
+        refreshed.notified().await;
+
+        assert_eq!(refreshes.load(Ordering::SeqCst), 1);
+        poller.task.abort();
+    }
+
+    /// Serves block 3 with a parent hash that never matches block 2.
+    #[derive(Debug)]
+    struct BrokenParentSource {
+        collects: Arc<AtomicUsize>,
+    }
+
+    impl BlockSource for BrokenParentSource {
+        fn collect_block(
+            &self,
+            height: u64,
+        ) -> futures::future::BoxFuture<'static, eyre::Result<BlockAndReceipts>> {
+            self.collects.fetch_add(1, Ordering::SeqCst);
+            async move {
+                match height {
+                    3 => Ok(test_utils::block_with_parent(
+                        3,
+                        3,
+                        alloy_primitives::B256::repeat_byte(0xee),
+                    )),
+                    h if h > 3 => Err(eyre::eyre!("not produced yet")),
+                    h => Ok(test_utils::block(h, h as u8 + 1)),
+                }
+            }
+            .boxed()
+        }
+
+        fn find_latest_block_number(&self) -> futures::future::BoxFuture<'static, Option<u64>> {
+            async { Some(1) }.boxed()
+        }
+
+        fn recommended_chunk_size(&self) -> u64 {
+            1
+        }
+
+        fn polling_interval(&self) -> Duration {
+            Duration::from_millis(50)
+        }
+    }
+
+    #[tokio::test]
+    async fn parent_mismatch_backs_off_instead_of_spinning() {
+        let collects = Arc::new(AtomicUsize::new(0));
+        let source = Arc::new(
+            Box::new(BrokenParentSource { collects: collects.clone() }) as Box<dyn BlockSource>
+        );
+        let store = Arc::new(BlockStore::new(source, None, TESTNET_CHAIN_ID));
+        let (mut poller, start) = BlockPoller::new_suspended(TESTNET_CHAIN_ID, store, None);
+
+        start.send(()).await.unwrap();
+        let deadline = tokio::time::Instant::now() + Duration::from_millis(500);
+        while let Ok(Some(_)) = tokio::time::timeout_at(deadline, poller.block_rx.recv()).await {}
+        poller.task.abort();
+
+        // Roughly one rewind per 50ms interval; without the back-off this ran into the tens of
+        // thousands.
+        let collects = collects.load(Ordering::SeqCst);
+        assert!(collects < 100, "source fetched {collects} times in 500ms");
+    }
+
+    /// Serves every requested height, each block with a distinct hash.
+    #[derive(Debug)]
+    struct NumberedSource;
+
+    impl BlockSource for NumberedSource {
+        fn collect_block(
+            &self,
+            height: u64,
+        ) -> futures::future::BoxFuture<'static, eyre::Result<BlockAndReceipts>> {
+            async move {
+                let mut block = test_utils::block(height, 1);
+                let crate::node::types::EvmBlock::Reth115(sealed) = &mut block.block;
+                sealed.header.hash =
+                    alloy_primitives::B256::from(alloy_primitives::U256::from(height));
+                Ok(block)
+            }
+            .boxed()
+        }
+
+        fn find_latest_block_number(&self) -> futures::future::BoxFuture<'static, Option<u64>> {
+            async { None }.boxed()
+        }
+
+        fn recommended_chunk_size(&self) -> u64 {
+            1000
+        }
+    }
+
+    #[tokio::test]
+    async fn header_request_is_served_in_full_above_reth_peer_limits() {
+        // Nanoreth's own downloader asks for up to `downloader_request_limit` headers at once
+        // (10000 in shipped configs); a shorter answer stalls header sync.
+        let source = Arc::new(Box::new(NumberedSource) as Box<dyn BlockSource>);
+        let store = Arc::new(BlockStore::new(source, None, TESTNET_CHAIN_ID));
+        let chain_spec = crate::chainspec::parser::chain_value_parser("testnet").unwrap();
+        let mut peer = PseudoPeer::new(chain_spec, store);
+        let (tx, rx) = tokio::sync::oneshot::channel();
+
+        peer.process_eth_request(IncomingEthRequest::GetBlockHeaders {
+            peer_id: PeerId::random(),
+            request: GetBlockHeaders {
+                start_block: HashOrNumber::Number(20_000),
+                limit: 10_000,
+                skip: 0,
+                direction: HeadersDirection::Falling,
+            },
+            response: tx,
+        })
+        .await
+        .unwrap();
+
+        let headers = rx.await.unwrap().unwrap().0;
+        assert_eq!(headers.len(), 10_000);
+        assert_eq!(headers.first().unwrap().number, 20_000);
+        assert_eq!(headers.last().unwrap().number, 10_001);
     }
 }

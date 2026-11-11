@@ -57,11 +57,10 @@ pub async fn start_pseudo_peer(
     block_store: Arc<BlockStore>,
     debug_cutoff_height: Option<u64>,
 ) -> eyre::Result<()> {
-
     // Create network manager (no boot_nodes — we add the peer directly)
     let (mut network, start_tx) =
-    create_network_manager((*chain_spec).clone(), block_store.clone(), debug_cutoff_height)
-    .await?;
+        create_network_manager((*chain_spec).clone(), block_store.clone(), debug_cutoff_height)
+            .await?;
 
     // Create the channels for receiving eth messages
     let (eth_tx, mut eth_rx) = mpsc::channel(32);
