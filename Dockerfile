@@ -39,8 +39,9 @@ RUN cargo build --profile $BUILD_PROFILE --features "$FEATURES" --locked --bin r
 # binary to a temporary location
 RUN cp /app/target/$BUILD_PROFILE/reth-hl /app/reth-hl
 
-# Use Ubuntu as the release image
-FROM ubuntu AS runtime
+# The builder's distro, so the binary runs on the glibc it was built against. A floating
+# `ubuntu` tag also moves major releases on its own.
+FROM debian:trixie-slim AS runtime
 WORKDIR /app
 
 # Install root certificates for aws sdk to work
